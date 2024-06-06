@@ -217,10 +217,10 @@ h1 {
 
 /* Estilo para o botão */
 button {
-  width: 200px;
+  width: 255px;
   padding: 10px;
   margin-top: 20px;
-  margin-left: 65px;
+  margin-left: 40px;
   color: #000000;
   border: 1px solid black;
   box-shadow: 0 0 0px black;
@@ -243,16 +243,21 @@ button:hover {
 
 .password-field {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 #inputPasswordId {
-  padding-right: 10px; /* Adiciona espaço à direita para o ícone */
+  margin-left: 40px; /* Adiciona espaço à direita para o ícone */
+  width: 255px; /* Faz o campo ocupar 100% da largura disponível */
+  box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+  padding: 10px; /* Ajusta o espaçamento interno */
 }
 
 .copy-icon {
   position: absolute;
   top: 60%;
-  right: 52px;
+  right: 25px;
   transform: translateY(-50%) scale(0.45); /* Reduz o tamanho do ícone para 50% do original */
   cursor: pointer;
   background-color: white; /* Adiciona fundo branco ao ícone para cobrir a senha */
