@@ -1,0 +1,273 @@
+/* Importação da fonte Roboto do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* Estilo para o corpo da página */
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(
+    135deg,
+    #8fffab,
+    #66cdaa,
+    #3cb371,
+    #2e8b57,
+    #008c23,
+    #2f4f4f
+  );
+  background-size: 400% 400%;
+  animation: gradient 30s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Estilo para o contêiner principal */
+.container {
+  width: 350px;
+  height: 300px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 15px;
+  border: 1px solid green;
+  border-radius: 25px;
+  background-color: #fff;
+  box-shadow: 0 0 1000px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Adicionado espaçamento interno */
+}
+
+.label {
+  width: 500px;
+  height: 200px;
+  position: relative;
+  display: block;
+  background: #ebebeb;
+  border-radius: 200px;
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
+    inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+/* Estilo para o título */
+h1 {
+  font-family: "Roboto", sans-serif; /* Aplica a fonte Roboto */
+  text-align: center;
+  font-size: 32px;
+  margin-top: -10px; /* Move o título um pouco mais para cima */
+  color: #333;
+}
+
+/* Estilo para o formulário */
+.form {
+  margin-top: 10px;
+}
+
+/* Estilo para a linha de checkboxes */
+.checkbox-row {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 40px; /* Ajuste para espaçamento direito */
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.checkbox-row label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1px;
+}
+
+.checkbox-row input[type="checkbox"] {
+  margin-left: 20px; /* Margem de 20px entre as checkboxes */
+  width: 1.3em;
+  height: 1.3em;
+  background-color: white;
+  border-radius: 50%; /* Arredonda as checkboxes */
+  vertical-align: middle;
+  border: 1px solid #000000; /* Cor preta para a borda */
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none; /* Impede a seleção ao arrastar com o mouse */
+}
+
+.checkbox-row input[type="checkbox"]:checked {
+  background-color: #4caf50; /* Aplica a cor verde quando selecionada */
+}
+
+/* Estilo para o grupo de entrada */
+.input-group {
+  margin-bottom: 10px;
+}
+
+/* Estilo para a barra de seleção de tamanho da senha */
+#inputLengthId {
+  width: 77%; /* Preenche a largura do contêiner */
+  margin-top: 0px;
+  margin-left: 40px;
+  border: 1px solid black;
+  user-select: none; /* Impede a seleção ao arrastar com o mouse */
+  -webkit-appearance: none; /* Remove o estilo padrão do sistema */
+  appearance: none;
+
+  /* Personalização da barra de seleção */
+  background-color: #e0e0e0; /* Cor de fundo da barra */
+  border-radius: 10px; /* Borda arredondada */
+  height: 15px; /* Altura da barra */
+  outline: none; /* Remove o contorno ao focar */
+}
+
+/* Estilização do controle deslizante */
+#inputLengthId::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Remove o estilo padrão do sistema */
+  appearance: none;
+  width: 20px; /* Largura do controle deslizante */
+  height: 20px; /* Altura do controle deslizante */
+  border-radius: 100%; /* Borda arredondada */
+  background-color: #4caf50; /* Cor do controle deslizante */
+  border: #000000 1px solid; /* Borda preta */
+  cursor: pointer; /* Cursor de apontador */
+  transition: background-color 0.3s; /* Transição suave */
+}
+
+/* Exibição do valor atual ao passar o mouse */
+#inputLengthId::-webkit-slider-thumb::after {
+  content: attr(value); /* Exibe o valor atual */
+  position: absolute; /* Posiciona o valor */
+  top: 25px; /* Alinha o valor acima da barra */
+  left: calc(100% + 5px); /* Alinha o valor à direita */
+  background-color: #4caf50; /* Cor de fundo do valor */
+  color: white; /* Cor do texto */
+  font-size: 12px; /* Tamanho da fonte */
+  border: #000000 1px solid; /* Borda preta */
+  padding: 3px 5px; /* Espaçamento interno */
+  border-radius: 5px; /* Borda arredondada */
+  opacity: 0; /* Oculta o valor inicialmente */
+  transition: opacity 0.3s; /* Transição suave */
+}
+
+/* Estilo para o valor atual ao lado da barra */
+.slider-value {
+  position: absolute;
+  top: -34px; /* Alinha o valor acima da barra */
+  left: 300px;
+  font-size: 14px; /* Tamanho da fonte */
+  color: #333; /* Cor do texto */
+  padding: 3px 5px; /* Espaçamento interno */
+  border-radius: 5px; /* Borda arredondada */
+}
+
+/* Exibição do valor atual ao arrastar */
+#inputLengthId:hover::-webkit-slider-thumb::after {
+  opacity: 1; /* Exibe o valor ao passar o mouse */
+}
+
+/* Estilo para o formulário */
+.form {
+  margin-top: 10px;
+  position: relative; /* Adiciona posição relativa */
+}
+
+/* Estilo para o campo de senha */ /* Estilo para o campo de senha */
+#inputPasswordId {
+  margin-left: 65px; /* Margem esquerda de 65px */
+  margin-top: 10px;
+  font-family: Consolas, monospace;
+  border-radius: 20px;
+  text-size-adjust: 30%;
+  padding: 9px;
+  width: 180px;
+  font-size: 15px;
+  border: 1px solid black;
+  /* Adicionamos cores para os diferentes tipos de caracteres */
+  color: black; /* Cor padrão */
+}
+
+/* Estilização de cores de caracteres */
+#inputPasswordId.has-numbers {
+  color: #0572ec; /* Azul para números */
+}
+
+#inputPasswordId.has-symbols {
+  color: #e64a4a; /* Vermelho para símbolos */
+}
+
+#inputPasswordId.has-uppercase {
+  color: yellow; /* Amarelo para letras maiúsculas */
+}
+
+#inputPasswordId.has-lowercase {
+  color: #000000; /* preto para letras minúsculas */
+}
+
+/* Estilo para o botão */
+button {
+  width: 200px;
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 65px;
+  color: #000000;
+  border: 1px solid black;
+  box-shadow: 0 0 0px black;
+  border-radius: 20px;
+  background-color: #4caf50;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#lengthIndicator {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  pointer-events: none; /* Garante que o indicador não seja clicável */
+}
+
+.password-field {
+  position: relative;
+}
+
+#inputPasswordId {
+  padding-right: 10px; /* Adiciona espaço à direita para o ícone */
+}
+
+.copy-icon {
+  position: absolute;
+  top: 60%;
+  right: 52px;
+  transform: translateY(-50%) scale(0.45); /* Reduz o tamanho do ícone para 50% do original */
+  cursor: pointer;
+  background-color: white; /* Adiciona fundo branco ao ícone para cobrir a senha */
+  padding: 10px; /* Espaçamento em torno do ícone para garantir cobertura total da senha */
+  border-radius: 100%; /* Torna o fundo do ícone circular */
+}
+
+.copy-icon::before {
+  content: ""; /* Adiciona conteúdo antes do ícone */
+  position: absolute;
+  top: 50%;
+  left: -5px; /* Ajusta a posição para a esquerda para que o quadrado fique atrás do ícone */
+  width: 10px;
+  height: 10px;
+  background-color: white; /* Cor do fundo */
+  border-radius: 0%; /* Borda quadrada */
+  transform: translateY(-50%); /* Centraliza verticalmente */
+}

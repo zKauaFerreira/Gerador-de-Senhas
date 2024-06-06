@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Gerador de Senhas</h1>
+      <div class="form">
+        <div class="checkbox-row">
+          <label for="uppercase">
+            <input type="checkbox" id="chkUpperId" checked />
+            ABC
+          </label>
+          <label for="lowercase">
+            <input type="checkbox" id="chkLowerId" checked />
+            abc
+          </label>
+          <label for="numbers">
+            <input type="checkbox" id="chkNumberId" checked />
+            123
+          </label>
+          <label for="symbols">
+            <input type="checkbox" id="chkSymbolsId" checked />
+            @#$
+          </label>
+        </div>
+        <div class="input-group">
+          <label for="inputLengthId"></label>
+          <input type="range" id="inputLengthId" min="8" max="80" value="14" />
+        </div>
+        <div class="password-field">
+          <input type="text" id="inputPasswordId" readonly />
+          <img src="copy-icon.png" id="copyIcon" class="copy-icon" alt="Copy" />
+          <span id="lengthValue" class="slider-value">14</span>
+        </div>
+        <button id="btnGerar">Gerar</button>
+        <div id="senhaInfo"></div>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
